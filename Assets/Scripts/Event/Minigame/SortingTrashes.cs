@@ -19,9 +19,14 @@ public class SortingTrashes : EventData
 
     }
 
-    public override void OnEvent()
+    public override void OnEventTrigger()
     {
-        base.OnEvent();
+        base.OnEventTrigger();
         // Sorting Trashes Minigame
+    }
+    public override void OnEventEnd()
+    {
+        base.OnEventEnd();
+        // End of Sorting Trashes Minigame
     }
 }
