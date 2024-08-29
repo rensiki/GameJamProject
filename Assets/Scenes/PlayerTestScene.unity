@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee86ba5397bb2a0488f67626ce044a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  isGround: 0
   jumpForce: 1
   jumpKey: 32
   groundTag: Ground
