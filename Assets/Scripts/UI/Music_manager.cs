@@ -10,6 +10,7 @@ public class Music_Manager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.5f;
         audioSource.Play();
 
         // 슬라이더의 값을 AudioSource의 볼륨으로 설정
