@@ -131,6 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 509773346}
+  - component: {fileID: 509773347}
   m_Layer: 0
   m_Name: GarbageCollector
   m_TagString: Untagged
@@ -156,6 +157,22 @@ Transform:
   - {fileID: 1491500725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &509773347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509773345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99857ff8f559df747b4c5165981173b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collector:
+  - {fileID: 1712443237}
+  - {fileID: 913774697}
+  - {fileID: 1491500723}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +463,7 @@ MonoBehaviour:
   - {fileID: 8970363929083236228, guid: 1402bf022c84bf14e89ff917c0dc83c5, type: 3}
   layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!4 &1188460406
 Transform:
   m_ObjectHideFlags: 0
