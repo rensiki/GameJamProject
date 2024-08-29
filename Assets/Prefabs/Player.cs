@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,15 +6,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
     bool isGround = false;
-    public float jumpForce = 1;
+    public float jumpForce = 5;
     public KeyCode jumpKey = KeyCode.Space;
     public string groundTag = "Ground";
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -27,11 +28,13 @@ public class Player : MonoBehaviour
 
     void jump(){
         if(!isGround) return;
-        rb.AddForce(Vector3.up * 1,ForceMode.Impulse);
+        rb.velocity = new Vector2(0,jumpForce);
         isGround = false;
     }
-    void OnCollisionEnter(Collision col){
-        if(col.transform.CompareTag(groundTag)){
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if(collision.transform.CompareTag(groundTag)){
             isGround = true;
         }
     }
