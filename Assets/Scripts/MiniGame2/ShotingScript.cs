@@ -68,6 +68,7 @@ public class ShotingScript : MonoBehaviour
         angle = Quaternion.FromToRotation(new Vector3(0,100,0), direction*-1).eulerAngles.z;
         Debug.Log(angle);
         arrowTrans.rotation = Quaternion.Euler(0, 0, angle);
+        //arrowTrans.localScale = new Vector3(0.8f, direction.magnitude, 1);
 
     }
 
