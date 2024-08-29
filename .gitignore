@@ -478,4 +478,7 @@ crashlytics-build.properties
 .history
 .ionide
 
+# OS generated files
+.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,unity,csharp
