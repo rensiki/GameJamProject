@@ -10,20 +10,12 @@ public class BallScript : MonoBehaviour
     Rigidbody2D ballRb;
     SpriteRenderer ballSprite;    
 
-    RaycastHit hit;
-    Ray ray;
-
-    float MaxDistance = 10f;
-    
     void Awake(){
         ballSprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        ray = new Ray();
-        ray.origin = transform.position;
-        ray.direction = Vector3.down;
-        Debug.DrawRay(transform.position, GetComponent<Rigidbody2D>().velocity*-1, Color.red);
+        
     }
 
     IEnumerator StopBall()
@@ -32,20 +24,21 @@ public class BallScript : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         yield return new WaitForSeconds(0.1f);
-        if (Physics.Raycast(ray.origin, ray.direction, out hit, MaxDistance)){
-            Debug.Log("Ball ray");
-            if(hit.collider.gameObject.tag == "Area"){
-                Debug.Log("Ball ray detected area");
-            }
-        }
         gameObject.tag = "Ball";
-      
         ballSprite.sprite = factoryBall;
+        //돈 감소
+
     }
     private void OnTriggerStay2D(Collider2D other) {
         if(other.gameObject.tag == "Forest"&&gameObject.tag == "Ball"){
-            Debug.Log("Ball is in the area");
+            Debug.Log("Ball is in the Forest");
             other.gameObject.SetActive(false);
+            //점수 깍기
+        }
+        if(other.gameObject.tag == "Area"&&gameObject.tag == "Ball"){
+            Debug.Log("Ball is in the Area");
+            other.gameObject.SetActive(false);
+            //돈 올리기
         }
     }
 

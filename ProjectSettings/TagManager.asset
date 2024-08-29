@@ -5,11 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
-<<<<<<< Updated upstream
-=======
   - Ball
   - Area
->>>>>>> Stashed changes
+  - Forest
   layers:
   - Default
   - TransparentFX
