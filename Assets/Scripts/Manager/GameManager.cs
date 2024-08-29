@@ -34,6 +34,7 @@ public class GameManager : Singleton<GameManager>
             case GameState.Select:
                 break;
             case GameState.End:
+                ChooseEnding();
                 break;
         }
     }
