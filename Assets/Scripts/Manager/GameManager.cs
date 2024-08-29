@@ -1,7 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum GameState
+{
+    Start,
+    Running,
+    Minigame,
+    Select,
+    End
+}
 public class GameManager : Singleton<GameManager>
 {
     
