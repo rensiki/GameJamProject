@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
     public List<EventStruct> eventList;
-    public abstract class EventStruct
+    [SerializeField]
+    private GameObject player;
+
+    // EventStruct
+    [System.Serializable]
+    public struct EventStruct
     {
         public string eventName;
         public Vector3 callPos;
-        public Vector3 endPos;
         public float eventDuration;
-
+        // EventObject is the object that has the event abstract class that will be called
+        public GameObject eventObject;
     }
 
     void Awake()
