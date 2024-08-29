@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     public  Animator animator;
-    void Satrt(){
+    void Start(){
         GameManager.Instance.runningAction += SetWalkTrue;
         GameManager.Instance.selectAction += SetWalkFalse;
         GameManager.Instance.eventAction += SetWalkFalse;
