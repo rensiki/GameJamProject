@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class GarbageSpawn : MonoBehaviour
@@ -7,6 +8,7 @@ public class GarbageSpawn : MonoBehaviour
     public GameObject[] spawnPoint;
     GarbageManager manager;
     GameObject garbage;
+    public bool isWaiting;
 
 
     private void Awake()
@@ -19,17 +21,19 @@ public class GarbageSpawn : MonoBehaviour
         Init();
     }
 
+
     void FixedUpdate()
     {
-        if (!manager.hit)
+        if (!manager.hit && !isWaiting)
         {
+            isWaiting = true;
             MoveGarbage();
         }
     }
 
     void Init()
     {
-        // ù Garbage ��ġ
+        // ù Garbage ��ġ
         for (int i = 0; i < spawnPoint.Length; i++)
         {
             garbage = Instantiate(manager.preFabs[Random.Range(0, manager.preFabs.Length)], spawnPoint[i].transform);
@@ -41,6 +45,7 @@ public class GarbageSpawn : MonoBehaviour
     // agsd
     void MoveGarbage()
     {
+
         for (int i = spawnPoint.Length - 2; i >= 0; i--)
         {
             spawnPoint[i].transform.GetChild(0).transform.position = spawnPoint[i + 1].transform.position;

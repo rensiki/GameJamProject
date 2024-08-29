@@ -7,54 +7,86 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GarbageManager : MonoBehaviour
 {
-    public static GarbageManager manager;
     GarbageSpawn spawn;
+
     public GameObject[] preFabs;
     List<GameObject>[] pooling;
+    public GameObject[] collector;
 
     public RaycastHit2D hit;
+    public RaycastHit2D firstHit;
     public LayerMask layer;
 
     void Awake()
     {
-        manager = this;
         spawn = GetComponent<GarbageSpawn>();
 
 
         pooling = new List<GameObject>[preFabs.Length];
 
-        for(int i = 0; i< preFabs.Length; i++)
+        for (int i = 0; i < pooling.Length; i++)
         {
             pooling[i] = new List<GameObject>();
         }
     }
 
-    //garbage À§Ä¡ È®ÀÎ
+    //garbage ï¿½ï¿½Ä¡ È®ï¿½ï¿½
     private void FixedUpdate()
     {
+
         hit = Physics2D.Raycast(spawn.spawnPoint[3].transform.position, Vector2.zero, 0, layer);
+
     }
 
-    // Garbage »ý¼º ¿ÀºêÁ§Æ® Ç®¸µ, index ´Â garbage ¹øÈ£ ,garbage ¹ÝÈ¯
+    private void Update()
+    {
+        if (hit && hit.transform.gameObject.activeSelf)
+        {
+            RaycastHit2D garbage = hit;
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Þ±ï¿½
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                DeleteGarbage(0);
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                DeleteGarbage(1);
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                DeleteGarbage(2);
+            }
+        }
+    }
+
+
+    void DeleteGarbage(int index)
+    {
+        RaycastHit2D garbage = hit;
+        garbage.transform.position = collector[index].transform.position;
+        garbage.transform.parent = null;
+        garbage.transform.gameObject.SetActive(false);
+    }
+
+    // Garbage ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ç®ï¿½ï¿½, index ï¿½ï¿½ garbage ï¿½ï¿½È£ ,garbage ï¿½ï¿½È¯
     public GameObject SpawnGarbage(int index)
     {
         GameObject select = null;
 
         foreach (GameObject garbage in pooling[index])
         {
-           if (!garbage.activeSelf)
-           {
+            if (!garbage.activeSelf)
+            {
                 select = garbage;
                 select.SetActive(true);
-                return select;
-           }
+                break;
+            }
         }
 
-        if(!select)
+        if (!select)
         {
-           select = Instantiate(preFabs[index]);
-           pooling[index].Add(select);
-           return select;
+            select = Instantiate(preFabs[index]);
+            pooling[index].Add(select);
         }
 
 

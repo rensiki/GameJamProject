@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6021965569931014244}
   - component: {fileID: 5640149885778293439}
-  - component: {fileID: 8366282561194037918}
-  - component: {fileID: -2988107003793245960}
-  - component: {fileID: -3126390378133165764}
-  m_Layer: 6
+  - component: {fileID: 5044327262566551917}
+  - component: {fileID: 1140066741062649504}
+  m_Layer: 0
   m_Name: Garbage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8366282561194037918
+--- !u!114 &5044327262566551917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb76750d16971fc4db45132c1b62869e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &-2988107003793245960
-CircleCollider2D:
+  garbageType: 0
+--- !u!61 &1140066741062649504
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,32 +132,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!50 &-3126390378133165764
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7395940211757335890}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
