@@ -1,12 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
-<<<<<<< Updated upstream
-
-public class GameManager : Singleton<GameManager>
-{
-    
-=======
 public enum GameState
 {
     Start,
@@ -78,5 +73,4 @@ public class GameManager : Singleton<GameManager>
         gameTime += 0.02f;
         gameTime = (float)Math.Round(gameTime, 2);
     }
->>>>>>> Stashed changes
 }
