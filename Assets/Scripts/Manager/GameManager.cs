@@ -17,6 +17,8 @@ public class GameManager : Singleton<GameManager>
 {
     public Action startAction;
     public GameState gameState = GameState.Start;
+    private int envPoint{get;set;}
+    
     void Update()
     {
         switch (gameState)
@@ -34,8 +36,17 @@ public class GameManager : Singleton<GameManager>
             case GameState.End:
                 break;
         }
-        
-
     }
+    void ChooseEnding(){
+        int goodEndingPoint = 100;
+        int nomalEndingPoint = 50;
+        int badEndingPoint = 20;
+        if(envPoint>=goodEndingPoint){
 
+        }else if(envPoint > nomalEndingPoint){
+
+        }else if( envPoint > badEndingPoint){
+            
+        }
+    }
 }
