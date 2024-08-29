@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 120338836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5800002, y: -3, z: -1}
+  m_LocalPosition: {x: 2.5800002, y: -3, z: 0}
   m_LocalScale: {x: 1.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -195,8 +195,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 773489777
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   m_Color: {r: 0.43544197, g: 1, b: 0, a: 1}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120338836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad988a0bf2c6149be9829ff30e718e58, type: 3}
+  m_Script: {fileID: 11500000, guid: 46bbebeb6b90e19478c55250b489bc56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Newspaper
@@ -405,8 +405,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 773489777
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 266055238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ee73dee743641cba995f94b8b4729b, type: 3}
+  m_Script: {fileID: 11500000, guid: ee86ba5397bb2a0488f67626ce044a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 5
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442832747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d90f207598a9473ebe4c162b504979f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f9b0f7cd38b90e4bb36d4550597c79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &442832749
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442832747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0867491fbef0f43a486df3443b22c06f, type: 3}
+  m_Script: {fileID: 11500000, guid: 25c4b68514e97c24a847da619a23a014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventList:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442832747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f20ad7ea33f3406ca942cbb597c857b, type: 3}
+  m_Script: {fileID: 11500000, guid: af38e2ae6fba9474f96d2a8a3112db14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameTime: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 465495109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13af767378ffe460ebebf870e002edb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a2dab63261f274409310dcf303538b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: SelectMaterial
@@ -831,7 +831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 20, y: -20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &686187145
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 686187143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a2c606ba7e5406b986744399efabbd, type: 3}
+  m_Script: {fileID: 11500000, guid: a1a91d29371aad34b84d902a19af5a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!222 &686187147
@@ -922,7 +922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
+  m_AnchoredPosition: {x: 351, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &757329086
@@ -997,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: 0}
+  m_AnchoredPosition: {x: 551, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &810019835
@@ -1177,7 +1177,7 @@ Transform:
   m_GameObject: {fileID: 1499538395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 5, z: -1}
+  m_LocalPosition: {x: -2, y: 5, z: 0}
   m_LocalScale: {x: 4, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1222,8 +1222,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1464181151
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635427694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3e3ebb325ee44db882cad1f8b6fc3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e4592466c5506748acaa7d7a79d32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
@@ -1490,7 +1490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 151, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1951103036
@@ -1603,8 +1603,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1464181151
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f469f8253737d534ca7809ae6f0d2422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2142554401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef159f8329874b848711206635f67f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 55b2e0d9f3e8f454486084a2388efbd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: CloseButton

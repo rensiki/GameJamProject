@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlayerLayer
+    uniqueID: 773489777
+    locked: 0
+  - name: OverlapLayer
+    uniqueID: 1464181151
+    locked: 0

@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager>
     public Action startAction;
     public Action runningAction;
     public GameState gameState = GameState.Select;
+    private int money = 0;
     private int envPoint { get; set; }
 
     new void Awake()
@@ -72,5 +73,10 @@ public class GameManager : Singleton<GameManager>
     {
         gameTime += 0.02f;
         gameTime = (float)Math.Round(gameTime, 2);
+    }
+
+    public void AddMoney(int amount)
+    {
+        money += amount;
     }
 }
