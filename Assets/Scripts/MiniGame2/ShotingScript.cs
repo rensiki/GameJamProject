@@ -17,11 +17,13 @@ public class ShotingScript : MonoBehaviour
     float angle;
     
     bool isDragging = false;
+    SpriteRenderer arrowSprite;
 
 
     void Awake()
     {
         arrowTrans = arrow.GetComponent<Transform>();
+        arrowSprite = arrow.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -45,31 +47,24 @@ public class ShotingScript : MonoBehaviour
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Shot();
             Debug.Log("Ended Dragging");
-
+            isDragging = false;
         }
     }
     void Shot(){
+        Debug.Log("Shot");
         GameObject newBall = Instantiate(ball, transform.position, Quaternion.identity);
         newBall.GetComponent<Rigidbody2D>().AddForce((endPos-startPos)*ballSpeed*-1, ForceMode2D.Impulse);
-        isDragging = false;
+        newBall.GetComponent<BallScript>().StartCoroutine("StopBall");
     }
 
     void DragArrow(){
-        //위에서 구한 목표 방향(Vector3)을 사분위수로 전환하는 메서드
-        //Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-        //(시작값, 목표값, 회전 속도)를 인자로 받아 회전 값을 연산해주는 메서드
-        //Quaternion rotateAmount = Quaternion.RotateTowards(arrowTrans.rotation, targetRotation, rotateSpeed * Time.deltaTime);
-
-        //회전값 적용
-        //Debug.Log(rotateAmount);
-        //arrowTrans.rotation = rotateAmount;
-        
+    
         angle = Quaternion.FromToRotation(new Vector3(0,100,0), direction*-1).eulerAngles.z;
-        Debug.Log(angle);
+        //Debug.Log(angle);
         arrowTrans.rotation = Quaternion.Euler(0, 0, angle);
+        arrowSprite.color = new Color(255, 0, 0, direction.magnitude/10);
         //arrowTrans.localScale = new Vector3(0.8f, direction.magnitude, 1);
-
+        //direction.magnitude만큼 색의 강도를 조절하거나 효과음을 변경시키면 좋을듯
     }
 
 }
