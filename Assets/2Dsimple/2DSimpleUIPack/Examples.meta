@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/2Dsimple/2DSimpleUIPack/Examples.meta
 guid: f580fc1de28c94b49b9c89d9a5d63b5c
+=======
+guid: 6fc1c5fe92d16824f91adcde6921830e
+>>>>>>> Stashed changes:Assets/2DSIMPLEUI/2DSimpleUIPack/Examples.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

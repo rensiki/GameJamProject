@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 8f05276190cf498a8153f6cbe761d4e6
 timeCreated: 1480316860
 licenseType: Pro
 TextScriptImporter:
+=======
+guid: 778d95ae81ccc8f46b9d6bcd34e5372e
+TextScriptImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

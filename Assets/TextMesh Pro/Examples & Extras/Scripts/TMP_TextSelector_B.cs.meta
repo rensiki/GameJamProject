@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: a05dcd8be7ec4ccbb35c26219884aa37
 timeCreated: 1435531209
 licenseType: Store
@@ -7,6 +8,13 @@ MonoImporter:
   defaultReferences:
   - TextPopup_Prefab_01: {fileID: 22450954, guid: b06f0e6c1dfa4356ac918da1bb32c603,
       type: 2}
+=======
+guid: e67f6820ffaa8664192225a3ddbdfbb3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+>>>>>>> Stashed changes
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -69,7 +69,11 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
+<<<<<<< Updated upstream
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # OS generated files
 .DS_Store
+=======
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+>>>>>>> Stashed changes

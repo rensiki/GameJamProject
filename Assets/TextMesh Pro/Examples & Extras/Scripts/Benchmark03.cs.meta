@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: a73109742c8d47ac822895a473300c29
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - TheFont: {instanceID: 0}
+=======
+guid: 1a113c1df980d054296ff79bd28db92b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+>>>>>>> Stashed changes
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

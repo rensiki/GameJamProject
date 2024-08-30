@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 251716609f634449bfe8ce75c0ed78fe
 labels:
 - Mesh
@@ -19,6 +20,11 @@ labels:
 - Atlas
 - Kerning
 DefaultImporter:
+=======
+guid: e8f58d309e6b0a1489e45a7af3d1fc74
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

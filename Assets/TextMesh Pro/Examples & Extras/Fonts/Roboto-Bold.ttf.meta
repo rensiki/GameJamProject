@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 4beb055f07aaff244873dec698d0363e
+=======
+guid: 581a434e86c2bb0408d0aef625a81bdd
+>>>>>>> Stashed changes
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,7 +12,10 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
+<<<<<<< Updated upstream
   fontName: Roboto
+=======
+>>>>>>> Stashed changes
   fontNames:
   - Roboto
   fallbackFontReferences: []

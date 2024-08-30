@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 790744c462254b7ba8038e6ed28b3db2
 timeCreated: 1458801336
 licenseType: Pro
 MonoImporter:
+=======
+guid: 3fbe8cc2c25bfc94f837e2ae9eca11c4
+MonoImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
