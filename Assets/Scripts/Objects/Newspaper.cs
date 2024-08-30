@@ -6,21 +6,25 @@ using UnityEngine.EventSystems;
 public class Newspaper : InteractableObject
 {
     GameObject focusedObject;
-    SpriteRenderer spriteRenderer;
+    BoxCollider2D boxCollider2D;
 
     public Newspaper()
     {
         objectName = "Newspaper";
+        isInteractable = true;
     }
     public void Awake()
     {
         focusedObject = transform.GetChild(0).gameObject;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
     public override void OnClick()
     {
+        // pause the game time
         // Show the focused object
+        isInteractable = false;
+        GameManager.Instance.gameState = GameState.Select;
         focusedObject.SetActive(true);
-        spriteRenderer.enabled = false;
+        boxCollider2D.enabled = false;
     }
 }
